@@ -41,14 +41,18 @@ textarea {
 }
 
 #hour_schedule {
-  background-color: #ffffff;
-  color: #000000;
+    color: #000000;
   border-top: 1px dashed #000000;
+}
+
+#hour{
+  background-color: #d4d9df;
 }
 
 .past {
   background-color:#ff6961;
   color: white;
+  /* pointer-events: none; */
   
 }
 

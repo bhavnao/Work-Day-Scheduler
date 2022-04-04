@@ -7,7 +7,7 @@ var container = $('.container');
 var hour = moment().format('H');
 console.log(hour);
 
-
+function timeBlock(){
 for(var i=0; i<time.length; i++){
     console.log(time[i]);
     var applicableClass = "future";
@@ -27,30 +27,41 @@ for(var i=0; i<time.length; i++){
 container.append(template);
 console.log(container);
 }
+}
+
+timeBlock();
 
 
-
-//$('.editable').eq(index).text();
 
 var saveBtn = $(".saveBtn");
 
-saveBtn.on("click", function() {
-    var time = $(this).siblings("#hour_schedule").text();
+saveBtn.on("click", function(event) {
+   
+   var time = $(this).parent().attr("id");
     var data = $(this).siblings(".editable").val();
 
-    localStorage.setItem(time, data);
+    localStorage.setItem(time, data);   
 });
 
-function saveInput() {
-    console.log(saveInput); 
+function applyInput(hr) {
+     var keyName = "hour_schedule"+hr; 
 
-    $("#hour_schedule").each(function() {
-        var currentHour = $(this).text();
-        var currData = localStorage.getItem(currentHour);
+    $("#"+keyName).each(function() {        
+        var currData = localStorage.getItem(keyName);
 
         if(currData !== null) {
-            $(this).siblings(".editable").val(currData);
+            $(this).children(".editable").val(currData);
         }
     });
+};
 
-}
+applyInput(8);
+applyInput(9);
+applyInput(10);
+applyInput(11);
+applyInput(12);
+applyInput(1);
+applyInput(2);
+applyInput(3);
+applyInput(4);
+applyInput(5);
