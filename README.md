@@ -30,7 +30,8 @@ I used jquery to create the timeblocks for the hour to be created dynamically.
 Moments.js is used to get the current date and time of the day. Local storage is used to set the data and then get the value in the calender. 
 
 ## Screenshots
-
+![Info page](./assets/images/Screenshot-1.png)
+![Info page](./assets/images/Screenshot-2.png)
 ## Deployed Application
-
+https://bhavnao.github.io/Work-Day-Scheduler/
  
